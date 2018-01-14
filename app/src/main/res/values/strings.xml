@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">LinkedOut</string>
+    <string name="bot_name">LinkedOut</string>
+    <string name="bot_alias">LexApp</string>
+    <string name="identity_id_test">YourCognitoIdentityPoolID</string>
+    <string name="cognito_region">YourCognitoRegion</string>
+    <string name="lex_region"></string>
+    <string name="screen_options_main_message">Amazon Lex</string>
 </resources>

@@ -1,18 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.unagi.hackaz.linkedout.MainActivity">
+    android:orientation="vertical"
+    android:background="#ffffff">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:paddingBottom="10dp"
+        android:background="#b2b5ba">
+
+        <RelativeLayout
+            android:id="@+id/layoutTop"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#58729b">
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/iv_profile"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="60dp"
+            app:cardElevation="4dp"></android.support.v7.widget.CardView>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="55dp"
+            android:elevation="8dp"
+            android:src="@drawable/bezos"
+            app:civ_border_color="#FFFFFF"
+            app:civ_border_width="2dp" />
+
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:text="Jeff Bezos "
+            android:textStyle="bold"
+            android:textColor="@color/text_color_1"
+            android:textSize="20sp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_profile"
+            android:elevation="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/tv_desig"
+            android:text="CEO of Amazon Inc"
+            android:textStyle="bold"
+            android:textColor="@color/text_color_1"
+            android:textSize="15sp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:elevation="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/tv_school"
+            android:text="Princeton University"
+            android:textStyle="bold"
+            android:textColor="@color/text_color_1"
+            android:textSize="15sp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_desig"
+            android:elevation="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true" />
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_inter_group_separation"
+        android:id="@+id/space_a1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+
+
+
+   <!-- <Button
+        android:text="Text widget"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/activity_button_text_size"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_button_height"
+        android:id="@+id/button_select_text"
+        android:layout_below="@+id/space_a2"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_selector"
+        android:layout_alignParentLeft="true" /> -->
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rec_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+
+
+
+</LinearLayout>
